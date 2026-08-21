@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>NapTheRobuxX5</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:#f5f6fa;
+    color:#171923;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    height:68px;
+
+    background:#fff;
+
+    border-bottom:1px solid #e7e8ee;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    color:#171923;
+}
+
+.logo span{
+    color:#635bff;
+}
+
+.nav{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav a{
+    color:#555b6e;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav a:hover{
+    color:#635bff;
+}
+
+.cart{
+    padding:9px 15px;
+
+    border-radius:20px;
+
+    background:#f0efff;
+
+    color:#5b50e8;
+
+    font-weight:800;
+}
+
+/* MAIN */
+
+.container{
+    width:min(1100px,94%);
+    margin:auto;
+}
+
+/* BANNER */
+
+.hero{
+    position:relative;
+
+    min-height:310px;
+
+    margin:25px 0;
+
+    padding:45px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #191b25 0%,
+            #34374b 48%,
+            #7567e8 100%
+        );
+
+    color:#fff;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:560px;
+}
+
+.hero h1{
+    margin:0 0 12px;
+
+    font-size:
+        clamp(35px,6vw,58px);
+
+    line-height:1.05;
+}
+
+.hero p{
+    margin:0;
+
+    color:#e0e1eb;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+.hero-button{
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:13px 22px;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    color:#282a37;
+
+    text-decoration:none;
+
+    font-weight:900;
+}
+
+.hero-decoration{
+    position:absolute;
+
+    right:-50px;
+    bottom:-100px;
+
+    width:390px;
+    height:390px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    box-shadow:
+        0 0 100px rgba(255,255,255,.12);
+}
+
+/* NOTICE */
+
+.notice{
+    padding:13px 17px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    background:#fff7dc;
+
+    border:1px solid #f1df9b;
+
+    color:#765c0c;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+/* SECTION */
+
+.section-title{
+    margin:30px 0 15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.section-title h2{
+    margin:0;
+
+    font-size:23px;
+}
+
+/* USERNAME */
+
+.user-card{
+    padding:22px;
+
+    background:#fff;
+
+    border:1px solid #e5e7ee;
+
+    border-radius:17px;
+
+    box-shadow:0 5px 20px rgba(20,25,50,.04);
+}
+
+label{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:800;
+}
+
+input{
+    width:100%;
+
+    padding:14px 15px;
+
+    border-radius:10px;
+
+    border:1px solid #dfe2ea;
+
+    outline:none;
+
+    background:#fff;
+
+    color:#171923;
+
+    font-size:15px;
+}
+
+input:focus{
+    border-color:#7066ee;
+
+    box-shadow:
+        0 0 0 3px rgba(112,102,238,.1);
+}
+
+/* FILTER */
+
+.filters{
+    display:flex;
+
+    gap:9px;
+
+    overflow-x:auto;
+
+    padding-bottom:6px;
+
+    margin-bottom:18px;
+}
+
+.filter{
+    flex:0 0 auto;
+
+    padding:9px 15px;
+
+    border:1px solid #dfe1e9;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    color:#555b6e;
+
+    font-weight:700;
+
+    font-size:13px;
+}
+
+.filter.active{
+    background:#635bff;
+
+    border-color:#635bff;
+
+    color:#fff;
+}
+
+/* PACKAGES */
+
+.packages{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:15px;
+}
+
+.package{
+    padding:20px;
+
+    background:#fff;
+
+    border:1px solid #e4e6ed;
+
+    border-radius:17px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    box-shadow:
+        0 5px 18px rgba(20,25,50,.035);
+}
+
+.package:hover{
+    transform:translateY(-3px);
+
+    border-color:#8a83ed;
+
+    box-shadow:
+        0 10px 30px rgba(70,60,180,.1);
+}
+
+.package.active{
+    border:2px solid #635bff;
+
+    background:#f8f7ff;
+}
+
+.package-top{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+}
+
+.robux{
+    font-size:20px;
+
+    font-weight:900;
+}
+
+.hot{
+    padding:5px 7px;
+
+    border-radius:6px;
+
+    background:#fff0ef;
+
+    color:#e45850;
+
+    font-size:10px;
+
+    font-weight:900;
+}
+
+.price{
+    margin-top:13px;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    color:#635bff;
+}
+
+.package-desc{
+    margin-top:7px;
+
+    color:#8b90a0;
+
+    font-size:12px;
+}
+
+/* BUTTON */
+
+.main-button{
+    width:100%;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:0;
+
+    border-radius:11px;
+
+    background:#635bff;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.main-button:hover{
+    background:#5149e9;
+
+    transform:translateY(-1px);
+}
+
+.secondary{
+    background:#eef0f5;
+
+    color:#464b5c;
+}
+
+/* HISTORY */
+
+.history{
+    margin-top:35px;
+}
+
+.order{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:17px;
+
+    margin-bottom:10px;
+
+    background:#fff;
+
+    border:1px solid #e5e7ee;
+
+    border-radius:14px;
+}
+
+.order-info{
+    line-height:1.7;
+}
+
+.order-info small{
+    color:#858b9c;
+}
+
+.pending{
+    padding:7px 10px;
+
+    border-radius:8px;
+
+    background:#fff6d9;
+
+    color:#856900;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    white-space:nowrap;
+}
+
+.empty{
+    padding:25px;
+
+    text-align:center;
+
+    color:#8a90a1;
+
+    background:#fff;
+
+    border-radius:14px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(20,22,35,.55);
+
+    backdrop-filter:blur(5px);
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:min(440px,100%);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.25);
+
+    animation:popup .2s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.94);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-box h2{
+    margin-top:0;
+}
+
+/* QR */
+
+.qr{
+    width:280px;
+    height:280px;
+
+    max-width:90vw;
+    max-height:90vw;
+
+    margin:20px auto;
+
+    padding:10px;
+
+    background:#fff;
+
+    border:1px solid #e0e2e8;
+
+    border-radius:14px;
+}
+
+.qr img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+.payment-status{
+    padding:14px;
+
+    border-radius:11px;
+
+    background:#fff7dc;
+
+    color:#705a11;
+
+    border:1px solid #f0df9b;
+
+    line-height:1.6;
+
+    font-size:13px;
+}
+
+.close{
+    background:#eef0f5;
+
+    color:#444958;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:45px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border-top:1px solid #e5e7ee;
+
+    color:#858a99;
+
+    font-size:12px;
+}
+
+@media(max-width:800px){
+
+.nav{
+    display:none;
+}
+
+.packages{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hero{
+    padding:32px 25px;
+}
+
+}
+
+@media(max-width:560px){
+
+header{
+    padding:0 4%;
+}
+
+.logo{
+    font-size:18px;
+}
+
+.packages{
+    grid-template-columns:1fr;
+}
+
+.hero{
+    min-height:270px;
+
+    padding:30px 20px;
+}
+
+.hero h1{
+    font-size:39px;
+}
+
+.hero-decoration{
+    width:240px;
+    height:240px;
+}
+
+.order{
+    align-items:flex-start;
+
+    flex-direction:column;
+}
+
+.pending{
+    white-space:normal;
+}
+
+.user-card,
+.card{
+    padding:17px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🎮 NapTheRobux<span>X5</span>
+</div>
+
+<nav class="nav">
+<a href="#top">Trang chủ</a>
+<a href="#packages">Gói Robux</a>
+<a href="#history">Lịch sử</a>
+</nav>
+
+<div class="cart">
+🛒 <span id="count">0</span>
+</div>
+
+</header>
+
+
+<main class="container" id="top">
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Robux<br>cho trải nghiệm của bạn</h1>
+
+<p>
+Chọn gói Robux, nhập username và tạo đơn
+thanh toán nhanh chóng.
+</p>
+
+<a href="#packages" class="hero-button">
+Xem gói Robux
+</a>
+
+</div>
+
+<div class="hero-decoration"></div>
+
+</section>
+
+
+<div class="notice">
+
+⚠️ <b>NapTheRobuxX5 là website độc lập</b>,
+không liên kết với Roblox hoặc VNGGames.
+Không nhập mật khẩu Roblox, OTP, cookie hoặc
+thông tin thẻ vào website.
+
+</div>
+
+
+<section class="user-card">
+
+<label>
+👤 Username Roblox
+</label>
+
+<input
+id="username"
+maxlength="30"
+autocomplete="off"
+placeholder="Nhập username Roblox của bạn..."
+>
+
+</section>
+
+
+<div class="section-title" id="packages">
+
+<h2>💎 Gói Robux</h2>
+
+</div>
+
+
+<div class="filters">
+
+<button
+class="filter active"
+onclick="filterPackages('all',this)"
+>
+Tất cả
+</button>
+
+<button
+class="filter"
+onclick="filterPackages('small',this)"
+>
+Gói nhỏ
+</button>
+
+<button
+class="filter"
+onclick="filterPackages('medium',this)"
+>
+Gói phổ biến
+</button>
+
+<button
+class="filter"
+onclick="filterPackages('large',this)"
+>
+Gói lớn
+</button>
+
+</div>
+
+
+<div
+id="packagesList"
+class="packages"
+></div>
+
+
+<button
+class="main-button"
+onclick="createCheckout()"
+>
+🛒 XÁC NHẬN ĐƠN HÀNG
+</button>
+
+
+<section
+class="history"
+id="history"
+>
+
+<div class="section-title">
+
+<h2>📋 Lịch sử đơn hàng</h2>
+
+</div>
+
+<div id="historyList"></div>
+
+<button
+class="main-button secondary"
+onclick="clearHistory()"
+>
+Xóa lịch sử demo
+</button>
+
+</section>
+
+</main>
+
+
+<footer>
+
+NapTheRobuxX5 — website độc lập,
+không liên kết Roblox/VNGGames.
+
+<br><br>
+
+Demo giao diện thanh toán.
+
+</footer>
+
+
+<!-- CHECKOUT MODAL -->
+
+<div
+id="checkoutModal"
+class="modal"
+>
+
+<div class="modal-box">
+
+<h2>🧾 Xác nhận đơn hàng</h2>
+
+<div id="checkoutInfo"></div>
+
+<button
+class="main-button"
+onclick="openQR()"
+>
+📷 Thanh toán bằng QR
+</button>
+
+<button
+class="main-button close"
+onclick="closeModals()"
+>
+Đóng
+</button>
+
+</div>
+
+</div>
+
+
+<!-- QR MODAL -->
+
+<div
+id="qrModal"
+class="modal"
+>
+
+<div class="modal-box">
+
+<h2>📷 Thanh toán QR</h2>
+
+<p style="color:#777d8e;font-size:14px">
+
+Mở ứng dụng ngân hàng và quét mã QR
+bên dưới để thực hiện thanh toán.
+
+</p>
+
+
+<div class="qr">
+
+<img
+src="https://i.postimg.cc/GtPDx9mV/IMG-5402.jpg"
+alt="QR thanh toán"
+>
+
+</div>
+
+
+<div class="payment-status">
+
+⏳ Sau khi chuyển khoản, vui lòng chờ
+<b>admin xác nhận trong vòng 10 phút</b>.
+
+<br><br>
+
+Đây chỉ là trạng thái đơn hàng trên giao diện;
+việc xác nhận thanh toán thực tế cần được
+kiểm tra ở hệ thống thanh toán.
+
+</div>
+
+
+<button
+class="main-button"
+onclick="submitOrder()"
+>
+✅ Tôi đã chuyển khoản
+</button>
+
+
+<button
+class="main-button close"
+onclick="closeModals()"
+>
+Đóng
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+const PACKAGES=[
+
+{
+robux:400,
+price:20000,
+category:"small"
+},
+
+{
+robux:800,
+price:40000,
+category:"small"
+},
+
+{
+robux:1700,
+price:80000,
+category:"medium"
+},
+
+{
+robux:4500,
+price:200000,
+category:"medium"
+},
+
+{
+robux:10000,
+price:400000,
+category:"large"
+},
+
+{
+robux:22500,
+price:800000,
+category:"large"
+}
+
+];
+
+
+let selectedPackage=null;
+let currentOrder=null;
+
+
+/* RENDER PACKAGES */
+
+function renderPackages(category="all"){
+
+const container=
+document.getElementById("packagesList");
+
+container.innerHTML="";
+
+
+PACKAGES
+.filter(p=>category==="all"||p.category===category)
+.forEach(p=>{
+
+const card=document.createElement("div");
+
+card.className="package";
+
+card.innerHTML=`
+
+<div class="package-top">
+
+<div class="robux">
+💎 ${p.robux.toLocaleString("vi-VN")}
+</div>
+
+<div class="hot">
+HOT
+</div>
+
+</div>
+
+<div class="price">
+${p.price.toLocaleString("vi-VN")}đ
+</div>
+
+<div class="package-desc">
+Gói Robux
+</div>
+
+`;
+
+card.onclick=()=>{
+
+document
+.querySelectorAll(".package")
+.forEach(x=>x.classList.remove("active"));
+
+card.classList.add("active");
+
+selectedPackage=p;
+
+};
+
+container.appendChild(card);
+
+});
+
+}
+
+
+/* FILTER */
+
+function filterPackages(category,button){
+
+document
+.querySelectorAll(".filter")
+.forEach(x=>x.classList.remove("active"));
+
+button.classList.add("active");
+
+renderPackages(category);
+
+selectedPackage=null;
+
+}
+
+
+/* CHECKOUT */
+
+function createCheckout(){
+
+const username=
+document
+.getElementById("username")
+.value
+.trim();
+
+
+if(!username){
+
+alert(
+"Vui lòng nhập username Roblox."
+);
+
+return;
+
+}
+
+
+if(!selectedPackage){
+
+alert(
+"Vui lòng chọn một gói Robux."
+);
+
+return;
+
+}
+
+
+currentOrder={
+
+username:username,
+
+package:selectedPackage
+
+};
+
+
+document
+.getElementById("checkoutInfo")
+.innerHTML=`
+
+<div
+style="
+padding:15px;
+background:#f5f6fa;
+border-radius:12px;
+line-height:2;
+"
+>
+
+👤 Username:
+<b>${safe(username)}</b>
+
+<br>
+
+💎 Robux:
+<b>
+${selectedPackage.robux.toLocaleString("vi-VN")}
+</b>
+
+<br>
+
+💰 Giá:
+<b>
+${selectedPackage.price.toLocaleString("vi-VN")}đ
+</b>
+
+</div>
+
+`;
+
+
+document
+.getElementById("checkoutModal")
+.classList.add("show");
+
+}
+
+
+/* QR */
+
+function openQR(){
+
+document
+.getElementById("checkoutModal")
+.classList.remove("show");
+
+document
+.getElementById("qrModal")
+.classList.add("show");
+
+}
+
+
+/* SUBMIT */
+
+function submitOrder(){
+
+if(!currentOrder)return;
+
+
+const orders=
+JSON.parse(
+localStorage.getItem("robuxOrders")||"[]"
+);
+
+
+const order={
+
+id:
+"RBX-"+Date.now(),
+
+username:
+currentOrder.username,
+
+robux:
+currentOrder.package.robux,
+
+price:
+currentOrder.package.price,
+
+status:
+"⏳ Chờ admin xác nhận",
+
+time:
+new Date().toLocaleString("vi-VN")
+
+};
+
+
+orders.unshift(order);
+
+
+localStorage.setItem(
+"robuxOrders",
+JSON.stringify(orders)
+);
+
+
+alert(
+"✅ Đã gửi đơn hàng!\n\n"+
+"⏳ Vui lòng chờ admin xác nhận trong vòng 10 phút."
+);
+
+
+currentOrder=null;
+selectedPackage=null;
+
+
+closeModals();
+
+renderHistory();
+
+}
+
+
+/* HISTORY */
+
+function renderHistory(){
+
+const box=
+document.getElementById("historyList");
+
+
+const orders=
+JSON.parse(
+localStorage.getItem("robuxOrders")||"[]"
+);
+
+
+document
+.getElementById("count")
+.textContent=orders.length;
+
+
+if(orders.length===0){
+
+box.innerHTML=`
+
+<div class="empty">
+Chưa có đơn hàng nào.
+</div>
+
+`;
+
+return;
+
+}
+
+
+box.innerHTML=
+orders.map(order=>`
+
+<div class="order">
+
+<div class="order-info">
+
+<b>
+💎 ${order.robux.toLocaleString("vi-VN")} Robux
+</b>
+
+<br>
+
+<small>
+Username: ${safe(order.username)}
+</small>
+
+<br>
+
+<small>
+Mã đơn: ${order.id}
+</small>
+
+<br>
+
+<small>
+${order.time}
+</small>
+
+</div>
+
+<div class="pending">
+⏳ Chờ admin xác nhận
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+/* CLEAR HISTORY */
+
+function clearHistory(){
+
+if(
+confirm(
+"Bạn có chắc muốn xóa lịch sử demo?"
+)
+){
+
+localStorage.removeItem("robuxOrders");
+
+renderHistory();
+
+}
+
+}
+
+
+/* CLOSE */
+
+function closeModals(){
+
+document
+.getElementById("checkoutModal")
+.classList.remove("show");
+
+document
+.getElementById("qrModal")
+.classList.remove("show");
+
+}
+
+
+/* SAFE TEXT */
+
+function safe(text){
+
+const div=
+document.createElement("div");
+
+div.textContent=text;
+
+return div.innerHTML;
+
+}
+
+
+/* START */
+
+renderPackages();
+
+renderHistory();
+
+</script>
+
+</body>
+</html>
